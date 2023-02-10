@@ -16,9 +16,6 @@ The service returns all matching timestamps of a periodic task (ptlist) between 
 To clean the environment
 >make clean
 
-### Run locally
-> go run src/*
-
 ### Perform a request
 From an http client run command as the following 
 >curl --location --request GET 'http://localhost:3000/ptlist?period=200d&tz=Europe/Athens&t1=20200714T204603Z&t2=20230715T204603Z'
@@ -46,4 +43,6 @@ t1=&t2=
 Interfaces have been used for the available periods extensibility
 Periods support various numbers (e.g 2d,10h etc.)
 Input validation for security reasons is supported
-[*zerolog*](https://pkg.go.dev/github.com/rs/zerolog) has been used for logging for easier parsing and troubleshooting
+[**zerolog**](https://pkg.go.dev/github.com/rs/zerolog) has been used for logging for easier parsing and troubleshooting
+**gofmt** and **golangci-lint** for code formatting and linting
+code coverage: 78.8%
