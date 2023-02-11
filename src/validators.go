@@ -17,7 +17,7 @@ func GetParams(r *http.Request) (*Params, error) {
 	t1 := r.URL.Query().Get("t1")
 	t2 := r.URL.Query().Get("t2")
 
-	periodRe, err := regexp.MatchString(`\d*(h|d|mo|y)`, period)
+	periodRe, err := regexp.MatchString(`\d+(h|d|mo|y)`, period)
 	if err != nil || !periodRe {
 		msg := "period bad format"
 		log.Error().Err(err).Msg(msg)
